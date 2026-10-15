@@ -1,42 +1,25 @@
-﻿namespace Tyuiu.GlebovLA.Sprint2.Task2.V3.Lib
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using tyuiu.cources.programming.interfaces.Sprint2;
+
+namespace Tyuiu.GlebovLA.Sprint2.Task2.V3.Lib
 {
-    public class DataService
+    public class DataService : ISprint2Task2V3
     {
         public bool CheckDotInShadedArea(int x, int y)
         {
-            switch (y)
-            {
-                case 3:
-                    return (x >= 3 && x <= 5) || (x >= 9 && x <= 12);
-
-                case 4:
-                    return (x >= 3 && x <= 5) || (x >= 9 && x <= 10);
-
-                case 5:
-                    return x >= 3 && x <= 10;
-
-                case 6:
-                case 7:
-                case 8:
-                    return x >= 7 && x <= 13;
-
-                case 9:
-                    return (x >= 4 && x <= 8) || (x >= 11 && x <= 12);
-
-                case 10:
-                    return x == 4 || x == 7 || x == 11 || x == 12;
-
-                case 11:
-                    return x == 3 || x == 4 || x == 7 ||
-                           (x >= 11 && x <= 13);
-
-                case 12:
-                case 13:
-                    return x == 4 || x == 7 || (x >= 11 && x <= 13);
-
-                default:
-                    return false;
-            }
+            if ((x >= 2 && x <= 3) && (y >= 3 && y <= 5)) return true;
+            if ((x >= 5 && x <= 8) && (y >= 3 && y <= 4)) return true;
+            if ((x >= 2 && x <= 8) && (y == 5)) return true;
+            if ((x >= 9 && x <= 11) && (y >= 5 && y <= 8)) return true;
+            if ((x >= 1 && x <= 2) && (y >= 10 && y <= 12)) return true;
+            if ((x >= 4 && x <= 7) && (y >= 9 && y <= 12)) return true;
+            if ((x >= 9 && x <= 10) && (y >= 11 && y <= 13)) return true;
+            if (x == 8 && y == 10) return true;
+            return false;
         }
     }
 }

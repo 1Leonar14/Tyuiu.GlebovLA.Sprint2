@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Tyuiu.GlebovLA.Sprint2.Task2.V3.Lib;
 
 namespace Tyuiu.GlebovLA.Sprint2.Task2.V3
@@ -7,38 +11,43 @@ namespace Tyuiu.GlebovLA.Sprint2.Task2.V3
     {
         static void Main(string[] args)
         {
-            Console.Title = "Проверка точки в заштрихованной области";
+            Console.Title = "Спринт #2 | Выполнил: Глебов Л.А. | ПКТб-26-1";
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* Спринт #2                                                               *");
+            Console.WriteLine("* Тема: Оператор if                                                       *");
+            Console.WriteLine("* Задание #2                                                              *");
+            Console.WriteLine("* Вариант #3                                                              *");
+            Console.WriteLine("* Выполнил: Глебов Леонид Александрович | ПКТб-26-1                       *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Написать программу, которая запрашивает целые значения с клавиатуры и   *");
+            Console.WriteLine("* вычисляет, находится ли точка с координатами X, Y в заштрихованной      *");
+            Console.WriteLine("* области.                                                                *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 
-            Console.WriteLine("************************************************************");
-            Console.WriteLine("* Спринт #2                                                *");
-            Console.WriteLine("* Проверка принадлежности точки заштрихованной области     *");
-            Console.WriteLine("* Выполнил: Глебов Леонид Александрович, ПКТБ-26-1         *");
-            Console.WriteLine("************************************************************");
+            Console.Write("Введите значение X: ");
+            int x = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Введите X (от 1 до 15): ");
-            if (!int.TryParse(Console.ReadLine(), out int x))
-            {
-                Console.WriteLine("Ошибка: введите целое число.");
-                return;
-            }
+            Console.Write("Введите значение Y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Введите Y (от 1 до 15): ");
-            if (!int.TryParse(Console.ReadLine(), out int y))
-            {
-                Console.WriteLine("Ошибка: введите целое число.");
-                return;
-            }
-
-            if (x < 1 || x > 15 || y < 1 || y > 15)
-            {
-                Console.WriteLine("Ошибка: координаты должны быть от 1 до 15.");
-                return;
-            }
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 
             DataService ds = new DataService();
-            bool result = ds.CheckDotInShadedArea(x, y);
+            bool res = ds.CheckDotInShadedArea(x, y);
 
-            Console.WriteLine("Результат: " + result);
+            if (res)
+            {
+                Console.WriteLine($"Точка с координатами ({x}, {y}) попадает в заштрихованную область.");
+            }
+            else
+            {
+                Console.WriteLine($"Точка с координатами ({x}, {y}) НЕ попадает в заштрихованную область.");
+            }
+
+            Console.WriteLine("***************************************************************************");
             Console.ReadKey();
         }
     }

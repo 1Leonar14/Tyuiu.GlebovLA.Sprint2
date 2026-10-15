@@ -1,31 +1,33 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Tyuiu.GlebovLA.Sprint2.Task2.V3.Lib;
 
-namespace Tyuiu.GlebovLA.Sprint2.Task1.V15.Test
+namespace Tyuiu.GlebovLA.Sprint2.Task2.V3.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void CheckPointInsideShadedArea()
+        public void CheckDotInShadedArea()
         {
             DataService ds = new DataService();
 
-            Assert.IsTrue(ds.CheckDotInShadedArea(3, 3));
-            Assert.IsTrue(ds.CheckDotInShadedArea(10, 4));
-            Assert.IsTrue(ds.CheckDotInShadedArea(8, 7));
-            Assert.IsTrue(ds.CheckDotInShadedArea(13, 13));
-        }
+            int x1 = 2;
+            int y1 = 4;
+            bool wait1 = true;
+            bool res1 = ds.CheckDotInShadedArea(x1, y1);
+            Assert.AreEqual(wait1, res1);
 
-        [TestMethod]
-        public void CheckPointOutsideShadedArea()
-        {
-            DataService ds = new DataService();
+            int x2 = 1;
+            int y2 = 1;
+            bool wait2 = false;
+            bool res2 = ds.CheckDotInShadedArea(x2, y2);
+            Assert.AreEqual(wait2, res2);
 
-            Assert.IsFalse(ds.CheckDotInShadedArea(6, 4));
-            Assert.IsFalse(ds.CheckDotInShadedArea(5, 10));
-            Assert.IsFalse(ds.CheckDotInShadedArea(1, 1));
-            Assert.IsFalse(ds.CheckDotInShadedArea(15, 15));
+            int x3 = 10;
+            int y3 = 13;
+            bool wait3 = true;
+            bool res3 = ds.CheckDotInShadedArea(x3, y3);
+            Assert.AreEqual(wait3, res3);
         }
     }
 }
