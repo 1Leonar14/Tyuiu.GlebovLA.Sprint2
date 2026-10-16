@@ -17,7 +17,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task7.V4.Lib
             {
                 res = true;
             }
-
             return res;
         }
     }

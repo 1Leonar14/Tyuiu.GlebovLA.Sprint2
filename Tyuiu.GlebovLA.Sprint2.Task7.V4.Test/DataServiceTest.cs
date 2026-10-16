@@ -10,7 +10,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task7.V4.Test
         public void CheckDotInShadedArea()
         {
             DataService ds = new DataService();
-
             double x = 0;
             double y = 0.5;
             bool wait = true;

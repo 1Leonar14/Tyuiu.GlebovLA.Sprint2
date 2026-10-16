@@ -28,7 +28,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task7.V4
 
             Console.Write("Введите значение переменной X: ");
             double x = Convert.ToDouble(Console.ReadLine());
-
             Console.Write("Введите значение переменной Y: ");
             double y = Convert.ToDouble(Console.ReadLine());
 
