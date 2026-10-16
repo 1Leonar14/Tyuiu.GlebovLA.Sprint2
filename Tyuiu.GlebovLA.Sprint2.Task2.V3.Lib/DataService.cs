@@ -20,6 +20,7 @@ namespace Tyuiu.GlebovLA.Sprint2.Task2.V3.Lib
             if ((x >= 9 && x <= 10) && (y >= 11 && y <= 13)) return true;
             if (x == 8 && y == 10) return true;
             return false;
+
         }
     }
 }
