@@ -28,7 +28,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task6.V9
 
             Console.Write("Введите номер месяца (x): ");
             int x = Convert.ToInt32(Console.ReadLine());
-
             Console.Write("Введите число (y): ");
             int y = Convert.ToInt32(Console.ReadLine());
 

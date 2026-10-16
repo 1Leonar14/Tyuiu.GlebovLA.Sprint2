@@ -25,6 +25,7 @@ namespace Tyuiu.GlebovLA.Sprint2.Task6.V9.Lib
                 10 => 31,
                 11 => 30,
                 12 => 31,
+
                 _ => throw new ArgumentException("Неверный номер месяца")
             };
 
