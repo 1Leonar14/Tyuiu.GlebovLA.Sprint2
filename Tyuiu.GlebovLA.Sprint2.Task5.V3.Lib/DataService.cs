@@ -39,6 +39,7 @@ namespace Tyuiu.GlebovLA.Sprint2.Task5.V3.Lib
                     throw new ArgumentException($"Введен неверный день недели {value}. Значение должно быть от 1 до 7.");
             }
             return res;
+
         }
     }
 }

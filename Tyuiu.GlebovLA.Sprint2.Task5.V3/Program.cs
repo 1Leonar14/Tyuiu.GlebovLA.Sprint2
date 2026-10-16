@@ -35,7 +35,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task5.V3
 
             DataService ds = new DataService();
             string res = ds.FindDayName(numDay);
-
             Console.WriteLine("Название дня недели: " + res);
             Console.ReadKey();
         }
