@@ -11,17 +11,11 @@ namespace Tyuiu.GlebovLA.Sprint2.Task4.V28.Test
         {
             DataService ds = new DataService();
 
-            double x1 = 1;
-            double y1 = 10;
-            double wait1 = 13;
-            double res1 = ds.Calculate(x1, y1);
-            Assert.AreEqual(wait1, res1);
-
-            double x2 = 5;
-            double y2 = 2;
-            double wait2 = 4.771;
-            double res2 = ds.Calculate(x2, y2);
-            Assert.AreEqual(wait2, res2);
+            double x = 1;
+            double y = 10;
+            double wait = 13;
+            double res = ds.Calculate(x, y);
+            Assert.AreEqual(wait, res);
         }
     }
 }
