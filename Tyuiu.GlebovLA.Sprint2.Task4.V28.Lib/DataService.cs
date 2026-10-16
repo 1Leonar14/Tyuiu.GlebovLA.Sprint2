@@ -19,6 +19,7 @@ namespace Tyuiu.GlebovLA.Sprint2.Task4.V28.Lib
                   (Math.Pow(y, 2) - Math.Sin(Math.Pow(x, 2)) + 9);
 
             return Math.Round(z, 3);
+
         }
     }
 }

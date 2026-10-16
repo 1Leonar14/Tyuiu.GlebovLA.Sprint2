@@ -34,7 +34,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task4.V28
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             DataService ds = new DataService();
-
             double res = ds.Calculate(x, y);
 
             Console.WriteLine($"Значение функции Z = {res}");

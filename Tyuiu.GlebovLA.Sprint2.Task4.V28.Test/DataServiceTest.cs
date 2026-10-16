@@ -10,7 +10,6 @@ namespace Tyuiu.GlebovLA.Sprint2.Task4.V28.Test
         public void CheckCalculate()
         {
             DataService ds = new DataService();
-
             double x = 1;
             double y = 10;
             double wait = 13;
